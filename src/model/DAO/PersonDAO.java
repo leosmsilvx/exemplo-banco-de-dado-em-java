@@ -1,12 +1,12 @@
 package model.DAO;
 
-import model.BEAN.PersonBEAN;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import model.bean.PersonBEAN;
 
 public class PersonDAO {
 
@@ -22,7 +22,7 @@ public class PersonDAO {
             pst = connection.prepareStatement(sql);
             // define os valores "?" da consulta, na mesma ordem
             pst.setString(1, person.getName());
-            pst.setString(2, person.getDateb());
+            pst.setString(2, person.getDateBirth());
             pst.setString(3, person.getAddress());
             //executa o comando
             pst.execute();
@@ -55,7 +55,7 @@ public class PersonDAO {
                 //pega os dados da consulta e coloca no objeto
                 person.setId(rs.getInt(1));
                 person.setName(rs.getString(2));
-                person.setDateb(rs.getString(3));
+                person.setDateBirth(rs.getString(3));
                 person.setAddress(rs.getString(4));
             }
             //fecha conexão, FECHAR SEMPRE
@@ -86,7 +86,7 @@ public class PersonDAO {
                 //pega os dados da consulta e coloca no objeto
                 person.setId(rs.getInt(1));
                 person.setName(rs.getString(2));
-                person.setDateb(rs.getString(3));
+                person.setDateBirth(rs.getString(3));
                 person.setAddress(rs.getString(4));
                 persons.add(person);
             }
@@ -111,7 +111,7 @@ public class PersonDAO {
             pst = connection.prepareStatement(sql);
             // define os valores "?" da consulta, na mesma ordem
             pst.setString(1, person.getName());
-            pst.setString(2, person.getDateb());
+            pst.setString(2, person.getDateBirth());
             pst.setString(3, person.getAddress());
             pst.setInt(4, id);
             // executa o comando

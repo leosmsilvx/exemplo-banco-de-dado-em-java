@@ -1,7 +1,7 @@
 package vision;
 
 import control.PersonControl;
-import model.BEAN.PersonBEAN;
+import model.bean.PersonBEAN;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -54,7 +54,7 @@ public class Main {
         System.out.print("Digite o nome: ");
         personBEAN.setName(ler.next());
         System.out.print("Digite a data de nascimento: ");
-        personBEAN.setDateb(ler.next());
+        personBEAN.setDateBirth(ler.next());
         System.out.print("Digite o endereço: ");
         personBEAN.setAddress(ler.next());
         boolean result = personControl.insertPerson(personBEAN);
@@ -70,7 +70,7 @@ public class Main {
             System.out.println("Pessoa encontrada!\n" +
                     "Id: " + person.getId() +
                     "\nNome: " + person.getName() +
-                    "\nData de nascimento: " + person.getDateb() +
+                    "\nData de nascimento: " + person.getDateBirth() +
                     "\nEndereço: " + person.getAddress());
         }else{
             System.out.println("Nenhum rgistro foi encontrado.");
@@ -84,7 +84,7 @@ public class Main {
                 System.out.println("======================\n" +
                         "Id: " + person.getId() +
                         "\nNome: " + person.getName() +
-                        "\nData de nascimento: " + person.getDateb() +
+                        "\nData de nascimento: " + person.getDateBirth() +
                         "\nEndereço: " + person.getAddress());
             }
         }
@@ -97,7 +97,7 @@ public class Main {
         System.out.print("Digine o novo nome da pessoa: ");
         person.setName(ler.next());
         System.out.print("Digite a nova data de nascimento da pessoa: ");
-        person.setDateb(ler.next());
+        person.setDateBirth(ler.next());
         System.out.print("Digite o novo endereço: ");
         person.setAddress(ler.next());
         boolean result = personControl.updatePerson(person, id);

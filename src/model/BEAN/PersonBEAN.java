@@ -1,10 +1,10 @@
-package model.BEAN;
+package model.bean; // TROCANDO O NOME DO PACOTE
 
 public class PersonBEAN {
 
     private int id;
     private String name;
-    private String dateb;
+    private String dateBirth; // TROCANDO O NOME DO ATRIBUTO
     private String address;
 
     public int getId() {
@@ -23,12 +23,12 @@ public class PersonBEAN {
         this.name = name;
     }
 
-    public String getDateb() {
-        return dateb;
+    public String getDateBirth() { // TROCANDO O METODO GET DO ATRIBUTO DATEBIRTH
+        return dateBirth;
     }
 
-    public void setDateb(String dateb) {
-        this.dateb = dateb;
+    public void setDateBirth(String dateBirth) { // TROCANDO O METODO SET DO ATRIBUTO DATEBIRTH
+        this.dateBirth = dateBirth;
     }
 
     public String getAddress() {

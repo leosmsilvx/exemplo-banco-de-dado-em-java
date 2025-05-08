@@ -1,7 +1,7 @@
 package control;
 
-import model.BEAN.PersonBEAN;
 import model.DAO.PersonDAO;
+import model.bean.PersonBEAN;
 
 import java.util.ArrayList;
 
